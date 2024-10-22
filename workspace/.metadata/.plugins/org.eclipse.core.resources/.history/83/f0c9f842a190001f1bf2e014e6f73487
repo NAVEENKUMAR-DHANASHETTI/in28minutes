@@ -31,11 +31,9 @@ public class UserDaoServices {
 		return users.stream().filter(predicate).findFirst().get();
 	}
 	
-	public User save(User user) {
+	public void save(User user) {
 		user.setId(++usersCount);
 		users.add(user);
-		return user;
-		
 	}
 
 }
