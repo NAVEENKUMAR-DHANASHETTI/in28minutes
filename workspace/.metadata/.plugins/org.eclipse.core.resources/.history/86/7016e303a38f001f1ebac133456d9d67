@@ -1,0 +1,16 @@
+package com.naveen.rest.webservices.restful_web_services.user;
+
+import java.util.List;
+
+public class UserResource {
+	
+	private UserDaoServices userDaoServices;
+	
+	public UserResource(UserDaoServices userDaoServices) {
+		this.userDaoServices = userDaoServices;
+	}
+	
+	public List<User> retrieveAllUsers() {
+		return userDaoServices.findAll();	}
+
+}

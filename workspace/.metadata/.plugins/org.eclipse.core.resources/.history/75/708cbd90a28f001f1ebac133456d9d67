@@ -1,0 +1,25 @@
+package com.naveen.rest.webservices.restful_web_services.user;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserDaoServices {
+	
+	public static List<User> users = new ArrayList<User>();
+	
+	static {
+		users.add(new User(1, "Avinash", LocalDate.now().minusYears(30)));
+		users.add(new User(2, "Raju", LocalDate.now().minusYears(25)));
+		users.add(new User(3, "Ravi", LocalDate.now().minusYears(28)));
+	}
+	
+	public List<User> getAllUsers(){
+		return users;
+	}
+	
+	public User getUsers(Integer id) {
+		return new User(0, "Zero", LocalDate.now());
+	}
+
+}
